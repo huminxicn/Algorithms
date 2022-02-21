@@ -65,28 +65,11 @@ public class NC142 {
     public static boolean hasRepeatSubString(List<String> subStrList, String str) {
         for (String subStr : subStrList) {
             String replace = str.replace(subStr + subStr, "");
+            //String replace = str.replace(subStr, "");
             if (str.length() - replace.length() >= subStr.length() * 2) {
                 return true;
             }
         }
         return false;
     }
-
-//    /**
-//     * 判断子串集合中是否有重复子串。
-//     *
-//     * @param subStrList
-//     * @param str
-//     * @return
-//     */
-//    public static boolean hasRepeatSubString(List<String> subStrList, String str) {
-//        for (String subStr : subStrList) {
-//            String replace = str.replace(subStr, "");
-//            if (str.length() - replace.length() >= subStr.length() * 2) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
-
 }
