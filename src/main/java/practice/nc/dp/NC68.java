@@ -1,4 +1,4 @@
-package practice.nc.dynamic;
+package practice.nc.dp;
 
 /**
  * 跳台阶。
