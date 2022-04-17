@@ -1,4 +1,4 @@
-package practice.leetcode.string;
+package practice.leetcode.number;
 
 import java.util.Stack;
 

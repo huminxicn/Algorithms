@@ -1,4 +1,4 @@
-package practice.leetcode.string;
+package practice.leetcode.number;
 
 /**
  * 字符串转换整数 (atoi)。

@@ -1,4 +1,5 @@
-package practice.leetcode.list;
+package practice.leetcode.number;
+
 
 /**
  * 两数相加。
