@@ -1,4 +1,4 @@
-package practice.leetcode.number;
+package practice.leetcode.list;
 
 /**
  * 一句话概括功能。
