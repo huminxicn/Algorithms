@@ -27,20 +27,23 @@ public class NC24 {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode reverseHead = new ListNode(0);
-        reverseHead.next = head;
-        ListNode prev = reverseHead;
+        //定义一个哨兵节点，方便记录表头数据。
+        ListNode sentinel = new ListNode(0);
+        sentinel.next = head;
+        ListNode prev = sentinel;
         while (prev.next != null && prev.next.next != null) {
             //通过 prev 节点获取 current 和 next 节点。
             ListNode current = prev.next;
             ListNode next = prev.next.next;
-            //先指定 prev 的下一个节点，然后再交换 current 和 next。
-            prev.next = next;
+            //交换 current 和 next。注意要记录 current.next，这样可以防止链表断裂。
             current.next = next.next;
             next.next = current;
-            //将 prev 节点往后挪一位。
+            //串联当前链表头节点。
+            prev.next = next;
+            //将 prev 节点往后挪一位。开启下一轮循环。
             prev = current;
         }
-        return reverseHead.next;
+        return sentinel.next;
     }
+
 }
