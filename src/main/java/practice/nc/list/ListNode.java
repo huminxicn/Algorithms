@@ -16,12 +16,14 @@ class ListNode {
 
     public static ListNode createList(int[] array) {
         ListNode head = null;
+        ListNode current = null;
         for (int i = 0; i < array.length; i++) {
-            if (head == null) {
-                head = new ListNode(array[i]);
+            if (current == null) {
+                current = new ListNode(array[i]);
+                head = current;
             } else {
-                head.next = new ListNode(array[i]);
-                head = head.next;
+                current.next = new ListNode(array[i]);
+                current = current.next;
             }
         }
         return head;
@@ -34,7 +36,8 @@ class ListNode {
             sb.append(",");
             listNode = listNode.next;
         }
-        System.out.println(sb.toString());
+        String substring = sb.substring(0, sb.lastIndexOf(","));
+        System.out.println(substring);
     }
 
 }
